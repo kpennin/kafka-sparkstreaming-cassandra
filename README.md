@@ -17,7 +17,9 @@ It additionnally installs
 Run container using [DockerHub image](https://hub.docker.com/r/yannael/kafka-sparkstreaming-cassandra)
 
 ```
-docker run -p 4040:4040 -p 8888:8888 -p 23:22 -ti --privileged yannael/kafka-sparkstreaming-cassandra
+run build.bat(.sh)
+run startup.bat(.sh)
+
 ```
 
 See following video for usage demo.

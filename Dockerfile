@@ -49,6 +49,21 @@ RUN pip install kafka-python
 
 USER root
 
+#Install Jupyter-Scala
+ADD jupyter-scala /home/guest/jupyter-scala
+
+RUN chown -R guest:guest jupyter-scala
+
+RUN curl -L -o /usr/bin/coursier https://git.io/vgvpD
+
+RUN chmod +x /usr/bin/coursier
+
+USER guest
+
+RUN /home/guest/jupyter-scala/jupyter-scala
+
+USER root
+
 #Startup (start SSH, Cassandra, Zookeeper, Kafka producer)
 ADD startup_script.sh /usr/bin/startup_script.sh
 RUN chmod +x /usr/bin/startup_script.sh
@@ -65,6 +80,10 @@ RUN chown guest:guest init_cassandra.cql
 #Add notebooks
 ADD notebooks /home/guest/notebooks
 RUN chown -R guest:guest notebooks
+
+#Add data
+ADD data /home/guest/data
+RUN chown -R guest:guest data
 
 #Install Cassandra
 ADD datastax.repo /etc/yum.repos.d/datastax.repo

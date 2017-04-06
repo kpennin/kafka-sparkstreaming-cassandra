@@ -9,20 +9,25 @@ This Dockerfile sets up a complete streaming environment for experimenting with 
 It additionnally installs
 
 * Anaconda distribution 4.1.1 for Python 2.7.10
-* Jupyter notebook for Python 
+* Jupyter notebook for Python
+* Jupyter-Scala kernel 
+* firethirtyeight data
 
 
 # Quick start-up guide
 
-Run container using [DockerHub image](https://hub.docker.com/r/yannael/kafka-sparkstreaming-cassandra)
+Note for Windows users:
+The Windows default RAM allocation for Docker is 2GB, which is not enough for this demo.  We recommend increasing this limit to 4GB.  You can find details on setting memory for Docker [here](https://docs.docker.com/docker-for-windows/#docker-settings).  Memory is located under Settings > Advanced.
 
 ```
 run build.bat(.sh)
 run startup.bat(.sh)
-
 ```
 
-See following video for usage demo.
+## Yannael Demo
+See following video for usage demo.  This demo runs a container using [DockerHub image](https://hub.docker.com/r/yannael/kafka-sparkstreaming-cassandra).
+
+
 <br>
 <a href="https://www.youtube.com/watch?v=XxCFo7BzNQ8" target="_blank"><img src="http://img.youtube.com/vi/XxCFo7BzNQ8/0.jpg" 
 alt="Demo" width="480" height="360" border="10" align="center"/></a>
@@ -41,7 +46,8 @@ Note:
     * 8888 bridges to the Jupyter Notebook
     * 23 bridges to SSH
 
-SSH allows to get a onnection to the container
+## SSH connection
+SSH allows to get a onnection to the container.
 
 ```
 ssh -p 23 guest@containerIP

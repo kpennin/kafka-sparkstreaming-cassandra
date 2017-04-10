@@ -89,4 +89,3 @@ RUN chown -R guest:guest data
 ADD datastax.repo /etc/yum.repos.d/datastax.repo
 RUN yum install -y datastax-ddc
 RUN echo "/usr/lib/python2.7/site-packages" |tee /home/guest/anaconda2/lib/python2.7/site-packages/cqlshlib.pth
-

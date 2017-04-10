@@ -24,7 +24,7 @@ run build.bat(.sh)
 run startup.bat(.sh)
 ```
 
-## Yannael Demo
+### Yannael Demo
 See following video for usage demo.  This demo runs a container using [DockerHub image](https://hub.docker.com/r/yannael/kafka-sparkstreaming-cassandra).
 
 
@@ -46,7 +46,7 @@ Note:
     * 8888 bridges to the Jupyter Notebook
     * 23 bridges to SSH
 
-## SSH connection
+### SSH connection
 SSH allows to get a onnection to the container.
 
 ```
@@ -68,7 +68,7 @@ Once run, you are logged in as root in the container. Run the startup_script.sh 
 startup_script.sh
 ```
 
-### Connect, create Cassandra table, open notebook and start streaming
+# Connect, create Cassandra table, open notebook and start streaming
 
 Connect as user 'guest' and go to 'host' folder (shared with the host)
 

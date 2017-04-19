@@ -52,7 +52,8 @@ USER root
 #Install Jupyter-Scala
 ADD jupyter-scala /home/guest/jupyter-scala
 
-RUN chown -R guest:guest jupyter-scala
+RUN chown -R guest:guest /home/guest/jupyter-scala/
+RUN chmod +x /home/guest/jupyter-scala/jupyter-scala
 
 RUN curl -L -o /usr/bin/coursier https://git.io/vgvpD
 
